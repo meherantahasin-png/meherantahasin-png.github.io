@@ -4,67 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
   <title>Meheran Tahasin | Personal Website</title>
-  <meta name="description" content="Welcome to the personal website of Meheran Tahasin, a student at KC College in Jhenaidah, Bangladesh, interested in technology, smartphones and computer science.">
+  <meta name="description" content="Official personal website of Meheran Tahasin, a student from Bangladesh interested in technology, smartphones and computer science.">
   <meta name="author" content="Meheran Tahasin">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#f7f7f5">
-
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://meherantahasin-png.github.io/">
 
-  <!-- Social Media Preview -->
+  <meta property="og:title" content="Meheran Tahasin">
+  <meta property="og:description" content="Discover the personal website of Meheran Tahasin.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Meheran Tahasin">
-  <meta property="og:title" content="Meheran Tahasin | Personal Website">
-  <meta property="og:description" content="The personal website of Meheran Tahasin, a student from Jhenaidah, Bangladesh. Explore his education, interests and journey in technology.">
   <meta property="og:url" content="https://meherantahasin-png.github.io/">
-
+  <meta property="og:image" content="https://meherantahasin-png.github.io/profile.jpg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Meheran Tahasin | Personal Website">
-  <meta name="twitter:description" content="Student from Jhenaidah, Bangladesh. Interested in technology, smartphones and computer science.">
+  <meta name="twitter:image" content="https://meherantahasin-png.github.io/profile.jpg">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Structured Data for Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Meheran Tahasin",
     "url": "https://meherantahasin-png.github.io/",
-    "description": "Student at KC College in Jhenaidah, Bangladesh, interested in technology, smartphones and computer science.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Jhenaidah",
-      "addressCountry": "BD"
-    },
-    "affiliation": {
-      "@type": "EducationalOrganization",
-      "name": "KC College, Jhenaidah"
+    "image": "https://meherantahasin-png.github.io/profile.jpg",
+    "description": "A student from Bangladesh interested in technology and computer science.",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Jhenaidah, Bangladesh"
     },
     "sameAs": [
+      "https://www.facebook.com/share/1RuGTZngkF/",
       "https://www.instagram.com/meheran_tahasin/"
     ]
   }
   </script>
 
-  <!-- Website Design -->
   <style>
-    :root {
-      --bg: #f7f7f5;
-      --ink: #171916;
-      --muted: #686d66;
-      --line: #dedfd9;
-      --accent: #526b5b;
-      --white: #ffffff;
-    }
-
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -73,308 +53,366 @@
     }
 
     body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "DM Sans", sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: #0b1020;
+      color: #f4f6ff;
       line-height: 1.7;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
-    a:hover {
-      color: var(--accent);
-    }
-
-    .wrap {
-      width: min(100% - 44px, 960px);
+    .container {
+      width: 90%;
+      max-width: 1050px;
       margin: auto;
     }
 
     header {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .wordmark {
-      font-weight: 700;
-      font-size: 19px;
-      letter-spacing: -0.05em;
+      padding: 22px 0;
+      border-bottom: 1px solid #222b40;
     }
 
     nav {
       display: flex;
-      gap: 25px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #7c9cff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
       font-size: 13px;
-      color: var(--muted);
+      color: #b7c0d5;
+    }
+
+    .nav-links a:hover {
+      color: #7c9cff;
     }
 
     .hero {
-      padding: 110px 0 94px;
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.19em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    h1 {
-      font: 600 clamp(48px, 8vw, 82px)/1.08 "Playfair Display", serif;
-      letter-spacing: -0.045em;
-      margin: 22px 0;
-    }
-
-    .intro {
-      font-size: 19px;
-      color: var(--muted);
-      max-width: 630px;
-    }
-
-    .links {
+      min-height: 580px;
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      font-size: 13px;
-      font-weight: 600;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 75px 0;
     }
 
-    .links a {
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 3px;
+    .profile-photo {
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #7c9cff;
+      margin-bottom: 25px;
+      background: #202a40;
+    }
+
+    .hero h1 {
+      font-size: clamp(35px, 7vw, 60px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #7c9cff;
+    }
+
+    .hero p {
+      color: #aeb8ce;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+    }
+
+    .location {
+      color: #8fa8ff;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .primary {
+      background: #7c9cff;
+      color: #0b1020;
+    }
+
+    .secondary {
+      border: 1px solid #46516d;
+      color: #f4f6ff;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      opacity: 0.85;
     }
 
     section {
-      padding: 55px 0;
-      border-top: 1px solid var(--line);
+      padding: 65px 0;
+      border-top: 1px solid #222b40;
+    }
+
+    .section-title {
+      font-size: 27px;
+      margin-bottom: 22px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-text {
+      color: #aeb8ce;
+      max-width: 750px;
+    }
+
+    .cards {
       display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 38px;
-      scroll-margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
     }
 
-    h2 {
-      font-size: 11px;
-      letter-spacing: 0.17em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin: 7px 0;
+    .card {
+      background: #141d32;
+      border: 1px solid #26324a;
+      border-radius: 13px;
+      padding: 23px;
     }
 
-    .content {
-      max-width: 650px;
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 9px;
+      color: #dce5ff;
     }
 
-    .content p {
-      margin: 0 0 16px;
-      color: #4d524c;
+    .card p {
+      font-size: 14px;
+      color: #aeb8ce;
     }
 
-    .item {
-      padding: 15px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .item:first-child {
-      padding-top: 0;
-    }
-
-    .item strong {
-      display: block;
-      font-size: 15px;
-    }
-
-    .item span {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .taglist {
+    .social-links {
       display: flex;
-      gap: 9px;
       flex-wrap: wrap;
-    }
-
-    .tag {
-      font-size: 13px;
-      border: 1px solid var(--line);
-      padding: 6px 11px;
-      border-radius: 99px;
-      color: #4d524c;
+      gap: 13px;
+      margin-top: 22px;
     }
 
     footer {
-      padding: 30px 0 45px;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      color: var(--muted);
-      font-size: 12px;
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid #222b40;
+      color: #8490a8;
+      font-size: 13px;
     }
 
-    @media (max-width: 650px) {
-      .wrap {
-        width: min(100% - 32px, 960px);
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
       }
 
-      nav {
-        gap: 13px;
-        font-size: 12px;
+      .nav-links {
+        justify-content: center;
+        gap: 15px;
       }
 
       .hero {
-        padding: 78px 0 65px;
+        min-height: auto;
+        padding: 65px 0;
       }
 
-      .intro {
-        font-size: 17px;
+      .profile-photo {
+        width: 145px;
+        height: 145px;
       }
 
       section {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        padding: 38px 0;
-      }
-
-      footer {
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 360px) {
-      nav {
-        gap: 9px;
-        font-size: 11px;
+        padding: 48px 0;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <!-- Header -->
-    <header>
-      <a class="wordmark" href="#top" aria-label="Meheran Tahasin home">MT.</a>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Meheran<span>.</span></a>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#interests">Interests</a>
-        <a href="#elsewhere">Elsewhere</a>
-      </nav>
-    </header>
-
-    <main id="top">
-
-      <!-- Hero -->
-      <div class="hero">
-        <div class="eyebrow">
-          Personal website · Jhenaidah, Bangladesh
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#interests">Interests</a>
+          <a href="#contact">Contact</a>
         </div>
+      </nav>
+    </div>
+  </header>
 
-        <h1>Meheran<br>Tahasin.</h1>
+  <main>
 
-        <p class="intro">
-          Student at KC College, Jhenaidah, with an interest
-          in technology, smartphones and computer science.
+    <div class="hero">
+      <div class="container">
+        <img
+          src="profile.jpg"
+          alt="Meheran Tahasin"
+          class="profile-photo"
+        >
+
+        <h1>Meheran <span>Tahasin</span></h1>
+
+        <p>
+          Student, technology enthusiast and curious learner.
+          Interested in exploring technology, understanding how things work
+          and building knowledge for the future.
         </p>
 
-        <div class="links">
-          <a href="#about">About me</a>
-          <a href="#interests">My interests</a>
-          <a href="https://www.instagram.com/meheran_tahasin/"
+        <div class="location">📍 Jhenaidah, Bangladesh</div>
+
+        <div class="buttons">
+          <a class="button primary" href="#about">Explore my website</a>
+          <a class="button secondary"
+             href="https://wa.me/8801410629070"
              target="_blank"
-             rel="noopener noreferrer">
-            Instagram ↗
-          </a>
+             rel="noopener noreferrer">WhatsApp me</a>
         </div>
       </div>
+    </div>
 
-      <!-- About -->
-      <section id="about">
-        <h2>About</h2>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
 
-        <div class="content">
-          <p>
-            I'm Meheran Tahasin, a student from Jhenaidah
-            District in Bangladesh. I'm currently studying
-            in Intermediate 1st Year at KC College, Jhenaidah.
-          </p>
+        <p class="section-text">
+          I'm Meheran Tahasin, a student from Bangladesh.
+          I enjoy learning about technology, exploring new ideas
+          and understanding the world around me.
+          I'm particularly interested in smartphones, computing
+          and the possibilities of technology.
+        </p>
+      </div>
+    </section>
 
-          <p>
-            I'm interested in technology, smartphones and
-            computer science. This website is my personal
-            space to share a little about myself and, over
-            time, document projects and work I choose to
-            make public.
-          </p>
-        </div>
-      </section>
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
 
-      <!-- Education -->
-      <section id="education">
-        <h2>Education</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Student</h3>
+            <p>
+              Currently pursuing my education in Bangladesh
+              and working towards my academic goals.
+            </p>
+          </div>
 
-        <div class="content">
-          <div class="item">
-            <strong>KC College, Jhenaidah</strong>
-            <span>Intermediate · 1st Year</span>
+          <div class="card">
+            <h3>Future Goals</h3>
+            <p>
+              Interested in computer science, technology
+              and continuing to develop my knowledge.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Interests -->
-      <section id="interests">
-        <h2>Interests</h2>
+    <section id="interests">
+      <div class="container">
+        <h2 class="section-title">My Interests</h2>
 
-        <div class="content">
-          <div class="taglist">
-            <span class="tag">Technology</span>
-            <span class="tag">Smartphones</span>
-            <span class="tag">Computer Science</span>
+        <div class="cards">
+          <div class="card">
+            <h3>Technology</h3>
+            <p>Exploring technology and understanding how it evolves.</p>
+          </div>
+
+          <div class="card">
+            <h3>Smartphones</h3>
+            <p>Interested in smartphone hardware, cameras and software.</p>
+          </div>
+
+          <div class="card">
+            <h3>Computer Science</h3>
+            <p>Interested in computing, programming and problem-solving.</p>
+          </div>
+
+          <div class="card">
+            <h3>Learning</h3>
+            <p>Always curious about new subjects, ideas and discoveries.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Elsewhere -->
-      <section id="elsewhere">
-        <h2>Elsewhere</h2>
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Find Me Online</h2>
 
-        <div class="content">
-          <div class="item">
-            <strong>Instagram</strong>
-            <span>
-              <a href="https://www.instagram.com/meheran_tahasin/"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                @meheran_tahasin ↗
-              </a>
-            </span>
-          </div>
+        <p class="section-text">
+          Connect with me through my social media profiles.
+        </p>
+
+        <div class="social-links">
+          <a class="button primary"
+             href="https://www.facebook.com/share/1RuGTZngkF/"
+             target="_blank"
+             rel="noopener noreferrer">Facebook</a>
+
+          <a class="button secondary"
+             href="https://wa.me/8801410629070"
+             target="_blank"
+             rel="noopener noreferrer">WhatsApp</a>
+
+          <a class="button secondary"
+             href="https://www.instagram.com/meheran_tahasin/"
+             target="_blank"
+             rel="noopener noreferrer">Instagram</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-      <span>© 2026 Meheran Tahasin</span>
-      <span>Personal website · Updated periodically</span>
-    </footer>
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Meheran Tahasin. All rights reserved.
+    </div>
+  </footer>
 
-  </div>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
