@@ -7,14 +7,12 @@
     <title>Meheran Tahasin | Personal Website</title>
 
     <meta name="description" content="The personal website of Meheran Tahasin, a Bangladeshi student interested in technology, smartphones, computing, literature and exploring new ideas.">
-
     <meta name="author" content="Meheran Tahasin">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#071426">
 
     <link rel="canonical" href="https://meherantahasin-png.github.io/">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Meheran Tahasin | Personal Website">
     <meta property="og:description" content="A curious mind, an endless list of things to explore, and a life full of possibilities.">
@@ -26,7 +24,6 @@
     <meta name="twitter:description" content="Explore the personal website of Meheran Tahasin.">
     <meta name="twitter:image" content="https://meherantahasin-png.github.io/profile.jpg">
 
-    <!-- Person structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,10 +44,6 @@
     </script>
 
     <style>
-        /* =========================
-           GLOBAL SETTINGS
-        ========================= */
-
         :root {
             --bg: #071426;
             --bg-light: #0b1c32;
@@ -130,9 +123,7 @@
             color: var(--blue);
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         header {
             position: fixed;
@@ -159,7 +150,8 @@
             letter-spacing: -1.5px;
         }
 
-        .logo span {
+        .logo span,
+        .footer-logo span {
             color: var(--blue);
         }
 
@@ -196,23 +188,17 @@
             cursor: pointer;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
-            min-height: 760px;
             min-height: 100svh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
             background:
-                radial-gradient(
-                    circle at 75% 40%,
-                    rgba(28,105,190,0.22),
-                    transparent 40%
-                ),
+                radial-gradient(circle at 75% 40%,
+                    rgba(28,105,190,0.22), transparent 40%),
                 linear-gradient(135deg, #071426, #102b4c);
         }
 
@@ -369,9 +355,7 @@
             z-index: 2;
         }
 
-        /* =========================
-           INTRODUCTION
-        ========================= */
+        /* INTRODUCTION */
 
         .intro-grid {
             display: grid;
@@ -408,9 +392,7 @@
             padding-bottom: 5px;
         }
 
-        /* =========================
-           INTERESTS
-        ========================= */
+        /* INTERESTS */
 
         .interests-section {
             background: var(--bg-light);
@@ -456,9 +438,7 @@
             line-height: 1.8;
         }
 
-        /* =========================
-           EDUCATION
-        ========================= */
+        /* EDUCATION */
 
         .education-layout {
             display: grid;
@@ -506,11 +486,8 @@
 
         .education-highlight {
             background:
-                radial-gradient(
-                    circle at 100% 0%,
-                    rgba(77,163,255,0.18),
-                    transparent 55%
-                ),
+                radial-gradient(circle at 100% 0%,
+                    rgba(77,163,255,0.18), transparent 55%),
                 var(--card);
             border: 1px solid var(--border);
             padding: 35px;
@@ -533,16 +510,10 @@
             font-weight: 600;
         }
 
-        /* =========================
-           CURRENTLY EXPLORING
-        ========================= */
+        /* EXPLORING */
 
         .exploring-section {
-            background: linear-gradient(
-                180deg,
-                #09192c,
-                #0d2440
-            );
+            background: linear-gradient(180deg, #09192c, #0d2440);
         }
 
         .exploring-grid {
@@ -577,9 +548,7 @@
             color: var(--muted);
         }
 
-        /* =========================
-           PERSONAL PHILOSOPHY
-        ========================= */
+        /* PERSONAL PHILOSOPHY */
 
         .quote-section {
             text-align: center;
@@ -608,9 +577,7 @@
             text-transform: uppercase;
         }
 
-        /* =========================
-           CONTACT CTA
-        ========================= */
+        /* CONTACT */
 
         .contact-section {
             background: var(--bg-light);
@@ -619,11 +586,8 @@
 
         .contact-box {
             background:
-                radial-gradient(
-                    circle at 90% 10%,
-                    rgba(77,163,255,0.19),
-                    transparent 45%
-                ),
+                radial-gradient(circle at 90% 10%,
+                    rgba(77,163,255,0.19), transparent 45%),
                 #10243d;
             border: 1px solid var(--border);
             border-radius: 14px;
@@ -648,9 +612,7 @@
             margin-top: 28px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             padding: 35px 0;
@@ -668,10 +630,6 @@
         .footer-logo {
             font-size: 21px;
             font-weight: 800;
-        }
-
-        .footer-logo span {
-            color: var(--blue);
         }
 
         .footer-content p {
@@ -694,9 +652,7 @@
             color: var(--blue-light);
         }
 
-        /* =========================
-           ANIMATIONS
-        ========================= */
+        /* ANIMATIONS */
 
         .reveal {
             opacity: 0;
@@ -726,12 +682,9 @@
             }
         }
 
-        /* =========================
-           TABLET
-        ========================= */
+        /* TABLET */
 
         @media (max-width: 850px) {
-
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -784,12 +737,9 @@
             }
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 600px) {
-
             .container {
                 width: 88%;
             }
@@ -919,13 +869,8 @@
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
-
     <header>
         <div class="container navbar">
-
             <a href="#home" class="logo">MT<span>.</span></a>
 
             <button class="menu-toggle"
@@ -943,16 +888,12 @@
                 <li><a href="about.html">More About Me ↗</a></li>
                 <li><a href="contact.html" class="nav-contact">Contact</a></li>
             </ul>
-
         </div>
     </header>
 
-
     <main>
 
-        <!-- =========================
-             HERO SECTION
-        ========================= -->
+        <!-- HERO -->
 
         <section class="hero" id="home">
 
@@ -990,7 +931,6 @@
                     </p>
 
                     <div class="hero-buttons">
-
                         <a href="#about" class="btn btn-primary">
                             EXPLORE MY WORLD →
                         </a>
@@ -998,13 +938,11 @@
                         <a href="about.html" class="btn btn-outline">
                             MORE ABOUT ME
                         </a>
-
                     </div>
 
                 </div>
 
                 <div class="hero-image-wrapper">
-
                     <div class="hero-image-ring">
                         <img
                             src="profile.jpg"
@@ -1015,7 +953,6 @@
                     <div class="hero-image-label">
                         MEHERAN TAHASIN
                     </div>
-
                 </div>
 
             </div>
@@ -1026,17 +963,13 @@
 
         </section>
 
-
-        <!-- =========================
-             ABOUT SECTION
-        ========================= -->
+        <!-- ABOUT -->
 
         <section class="section" id="about">
 
             <div class="container intro-grid">
 
                 <div class="reveal">
-
                     <div class="section-label">
                         01 / A LITTLE INTRODUCTION
                     </div>
@@ -1044,7 +977,6 @@
                     <div class="intro-number">
                         Hello.
                     </div>
-
                 </div>
 
                 <div class="intro-content reveal">
@@ -1091,10 +1023,7 @@
 
         </section>
 
-
-        <!-- =========================
-             INTERESTS SECTION
-        ========================= -->
+        <!-- INTERESTS -->
 
         <section class="section interests-section" id="interests">
 
@@ -1186,10 +1115,7 @@
 
         </section>
 
-
-        <!-- =========================
-             EDUCATION SECTION
-        ========================= -->
+        <!-- EDUCATION -->
 
         <section class="section" id="education">
 
@@ -1280,10 +1206,7 @@
 
         </section>
 
-
-        <!-- =========================
-             CURRENTLY EXPLORING
-        ========================= -->
+        <!-- CURRENTLY EXPLORING -->
 
         <section class="section exploring-section">
 
@@ -1310,9 +1233,7 @@
                 <div class="exploring-grid">
 
                     <div class="exploring-item reveal">
-
                         <div class="exploring-icon">01</div>
-
                         <div>
                             <h3>Understanding Technology</h3>
                             <p>
@@ -1321,13 +1242,10 @@
                                 the modern world.
                             </p>
                         </div>
-
                     </div>
 
                     <div class="exploring-item reveal">
-
                         <div class="exploring-icon">02</div>
-
                         <div>
                             <h3>Computer Science</h3>
                             <p>
@@ -1336,13 +1254,10 @@
                                 and software.
                             </p>
                         </div>
-
                     </div>
 
                     <div class="exploring-item reveal">
-
                         <div class="exploring-icon">03</div>
-
                         <div>
                             <h3>Creative Storytelling</h3>
                             <p>
@@ -1351,13 +1266,10 @@
                                 and animation.
                             </p>
                         </div>
-
                     </div>
 
                     <div class="exploring-item reveal">
-
                         <div class="exploring-icon">04</div>
-
                         <div>
                             <h3>New Experiences</h3>
                             <p>
@@ -1366,7 +1278,6 @@
                                 to grow.
                             </p>
                         </div>
-
                     </div>
 
                 </div>
@@ -1375,10 +1286,7 @@
 
         </section>
 
-
-        <!-- =========================
-             PERSONAL PHILOSOPHY
-        ========================= -->
+        <!-- PERSONAL PHILOSOPHY -->
 
         <section class="quote-section">
 
@@ -1399,10 +1307,7 @@
 
         </section>
 
-
-        <!-- =========================
-             CONTACT SECTION
-        ========================= -->
+        <!-- CONTACT -->
 
         <section class="section contact-section" id="contact">
 
@@ -1426,8 +1331,7 @@
                         welcome to connect.
                     </p>
 
-                    <a href="contact.html"
-                       class="btn btn-primary">
+                    <a href="contact.html" class="btn btn-primary">
                         GET IN TOUCH →
                     </a>
 
@@ -1439,10 +1343,7 @@
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1481,17 +1382,12 @@
 
     </footer>
 
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
+    <!-- MAIN WEBSITE JAVASCRIPT -->
 
     <script>
-
         // Automatic copyright year
         document.getElementById("year").textContent =
             new Date().getFullYear();
-
 
         // Mobile navigation
         const menuToggle =
@@ -1501,7 +1397,6 @@
             document.getElementById("navLinks");
 
         menuToggle.addEventListener("click", function() {
-
             const isOpen =
                 navLinks.classList.toggle("active");
 
@@ -1512,16 +1407,12 @@
 
             menuToggle.textContent =
                 isOpen ? "✕" : "☰";
-
         });
-
 
         // Close mobile menu after selecting a link
         document.querySelectorAll(".nav-links a")
             .forEach(function(link) {
-
                 link.addEventListener("click", function() {
-
                     navLinks.classList.remove("active");
 
                     menuToggle.setAttribute(
@@ -1530,63 +1421,45 @@
                     );
 
                     menuToggle.textContent = "☰";
-
                 });
-
             });
-
 
         // Reveal animations on scroll
         const observer = new IntersectionObserver(
             function(entries) {
-
                 entries.forEach(function(entry) {
-
                     if (entry.isIntersecting) {
-
                         entry.target.classList.add("visible");
-
                         observer.unobserve(entry.target);
-
                     }
-
                 });
-
             },
             {
                 threshold: 0.12
             }
         );
 
-
         document.querySelectorAll(".reveal")
             .forEach(function(element) {
-
                 observer.observe(element);
-
             });
-
 
         // Header background on scroll
         window.addEventListener("scroll", function() {
-
             const header = document.querySelector("header");
 
             if (window.scrollY > 40) {
-
                 header.style.background =
                     "rgba(7,20,38,0.96)";
-
             } else {
-
                 header.style.background =
                     "rgba(7,20,38,0.83)";
-
             }
-
         }, { passive: true });
-
     </script>
+
+    <!-- RESTORE THE ORIGINAL ASK MEHERAN AI ASSISTANT -->
+    <script src="chatbot.js" defer></script>
 
 </body>
 </html>
