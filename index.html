@@ -731,5 +731,182 @@
       new Date().getFullYear();
   </script>
 
+<style>
+#ask-meheran {
+  max-width: 760px;
+  margin: 70px auto;
+  padding: 28px 20px;
+  color: #f5f0e8;
+  font-family: Arial, sans-serif;
+}
+#ask-meheran h2 {
+  color: #c7a77a;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+#ask-meheran .intro {
+  color: #aaa;
+  margin-bottom: 22px;
+}
+#ask-chat {
+  background: #111318;
+  border: 1px solid #34343a;
+  border-radius: 14px;
+  padding: 16px;
+}
+#ask-messages {
+  height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.ask-message {
+  padding: 11px 14px;
+  border-radius: 12px;
+  max-width: 85%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.ask-bot {
+  background: #25252b;
+  align-self: flex-start;
+}
+.ask-user {
+  background: #806747;
+  color: white;
+  align-self: flex-end;
+}
+#ask-form {
+  display: flex;
+  gap: 9px;
+}
+#ask-input {
+  flex: 1;
+  min-width: 0;
+  background: #202127;
+  border: 1px solid #444;
+  color: white;
+  padding: 13px;
+  border-radius: 9px;
+  font-size: 15px;
+}
+#ask-form button {
+  background: #c7a77a;
+  color: #111;
+  border: none;
+  padding: 0 20px;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#ask-form button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+</style>
+
+<section id="ask-meheran">
+  <h2>Ask Meheran</h2>
+  <p class="intro">
+    Curious about me? Ask anything. You can also ask general questions.
+  </p>
+
+  <div id="ask-chat">
+    <div id="ask-messages" aria-live="polite">
+      <div class="ask-message ask-bot">
+        Hello! I'm Ask Meheran, an AI assistant. Ask me something about Meheran or anything else.
+      </div>
+    </div>
+
+    <form id="ask-form">
+      <input
+        id="ask-input"
+        type="text"
+        placeholder="Type your question..."
+        maxlength="2000"
+        autocomplete="off"
+        required
+      >
+      <button id="ask-send" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<script>
+(() => {
+  const API_URL = "https://ask-meheran-ai.meherantahasin.workers.dev";
+
+  const form = document.getElementById("ask-form");
+  const input = document.getElementById("ask-input");
+  const send = document.getElementById("ask-send");
+  const messagesBox = document.getElementById("ask-messages");
+
+  const history = [];
+
+  function addMessage(text, type) {
+    const message = document.createElement("div");
+    message.className = "ask-message " +
+      (type === "user" ? "ask-user" : "ask-bot");
+    message.textContent = text;
+    messagesBox.appendChild(message);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+    return message;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const question = input.value.trim();
+    if (!question || send.disabled) return;
+
+    addMessage(question, "user");
+    history.push({ role: "user", content: question });
+
+    input.value = "";
+    send.disabled = true;
+    send.textContent = "...";
+
+    const loading = addMessage("Thinking...", "bot");
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          messages: history.slice(-10)
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Request failed.");
+      }
+
+      if (!data.reply) {
+        throw new Error("The AI returned an empty response.");
+      }
+
+      loading.textContent = data.reply;
+      history.push({ role: "assistant", content: data.reply });
+
+    } catch (error) {
+      loading.textContent =
+        "Sorry, something went wrong. Please try again.";
+      console.error("Ask Meheran:", error);
+    } finally {
+      send.disabled = false;
+      send.textContent = "Send";
+      input.focus();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
