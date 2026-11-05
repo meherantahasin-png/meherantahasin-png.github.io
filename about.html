@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Meheran Tahasin</title>
+  <meta name="description" content="Learn more about Meheran Tahasin, his education, interests, ambitions and ideas.">
+  <meta name="author" content="Meheran Tahasin">
+  <meta name="theme-color" content="#090a0d">
+  <link rel="canonical" href="https://meherantahasin-png.github.io/about.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090a0d;
+      --surface: #111318;
+      --gold: #c7a77a;
+      --white: #f4f1eb;
+      --muted: #a09da0;
+      --border: rgba(255,255,255,.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1100px, 88%); margin: auto; }
+
+    header {
+      padding: 22px 0;
+      background: rgba(9,10,13,.95);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      font-size: 13px;
+      color: #ddd;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    main { min-height: 75vh; }
+
+    .page-hero {
+      padding: 100px 0 65px;
+      background: linear-gradient(120deg, #15161b, #090a0d);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow, .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    h1 { font-size: clamp(44px, 8vw, 72px); line-height: 1.15; }
+    h1 span { color: var(--gold); }
+
+    h2 { font-size: clamp(30px, 5vw, 44px); margin-bottom: 24px; }
+    h3 { font-size: 23px; margin-bottom: 8px; }
+
+    section { padding: 75px 0; scroll-margin-top: 25px; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .section-text { color: var(--muted); max-width: 720px; font-size: 15px; }
+    .profile-image {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+
+    .details { display: grid; gap: 14px; margin-top: 28px; }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .detail span:first-child { color: var(--muted); }
+    .detail span:last-child { text-align: right; }
+
+    .education-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--gold);
+      padding: 30px;
+      max-width: 700px;
+    }
+
+    .education-card p { color: var(--muted); font-size: 14px; }
+    .achievement { color: var(--gold) !important; margin-top: 14px; }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .interest-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 25px 22px;
+      transition: .3s;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+
+    .interest-card h3 { font-size: 19px; }
+    .interest-card p { color: var(--muted); font-size: 12px; }
+
+    .philosophy { background: #101116; text-align: center; }
+
+    .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(25px, 4vw, 38px);
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+    .quote span { color: var(--gold); }
+
+    .languages {
+      margin-top: 25px;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: #777;
+      font-size: 11px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 18px 0; }
+      .nav-links { gap: 13px; font-size: 11px; }
+      .logo { font-size: 18px; }
+      .page-hero { padding: 80px 0 55px; }
+      section { padding: 60px 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .profile-image { max-width: 260px; }
+      .interest-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .interest-card { padding: 19px 14px; }
+      .interest-card h3 { font-size: 16px; }
+      .detail { font-size: 12px; }
+    }
+
+    @media (max-width: 380px) {
+      .nav-links { gap: 9px; font-size: 10px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">MT.</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow">01 / Get to know me</p>
+        <h1>A little more<br>about <span>myself.</span></h1>
+      </div>
+    </div>
+
+    <section id="profile">
+      <div class="container about-grid">
+        <div>
+          <p class="section-label">02 / About me</p>
+          <h2>A curious mind.</h2>
+          <p class="section-text">
+            I am just someone who is curious. I like to know
+            everything and explore different things. I want to
+            experience as much as a person possibly can in life.
+
+            I don't really like being around too many people.
+            I have a small circle of people I genuinely care
+            about, and I love spending time with them.
+          </p>
+
+          <div class="details">
+            <div class="detail"><span>Name</span><span>Meheran Tahasin</span></div>
+            <div class="detail"><span>Current role</span><span>HSC Student</span></div>
+            <div class="detail"><span>Personality</span><span>Curious · Analytical · Ambitious</span></div>
+            <div class="detail"><span>Languages</span><span>Bangla · English · Hindi</span></div>
+          </div>
+        </div>
+
+        <div>
+          <img src="profile.jpg" alt="Portrait of Meheran Tahasin"
+            class="profile-image" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <p class="section-label">03 / Education</p>
+        <h2>Learning and growing.</h2>
+
+        <div class="education-card">
+          <h3>KC College, Jhenaidah</h3>
+          <p>Intermediate 1st Year · Higher Secondary Certificate (HSC)</p>
+          <p class="achievement">SSC Achievement: GPA-5</p>
+          <p style="margin-top:18px;">
+            My academic ambition is to pursue Computer Science
+            and Engineering (CSE). My choice of university is
+            still undecided.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="container">
+        <p class="section-label">04 / Interests</p>
+        <h2>Things I enjoy exploring.</h2>
+        <p class="section-text">
+          My curiosity doesn't stay in one place.
+          These are some of the things that keep me interested.
+        </p>
+
+        <div class="interest-grid">
+          <div class="interest-card"><h3>Technology</h3><p>Exploring technology and the way it shapes our world.</p></div>
+          <div class="interest-card"><h3>Smartphones</h3><p>Mobile technology, cameras, hardware and software.</p></div>
+          <div class="interest-card"><h3>Computer Science</h3><p>An interest in computing and the possibilities it creates.</p></div>
+          <div class="interest-card"><h3>Anime</h3><p>Stories, characters and imaginative worlds.</p></div>
+          <div class="interest-card"><h3>Literature</h3><p>Books, ideas and different perspectives on life.</p></div>
+          <div class="interest-card"><h3>Movies & TV Series</h3><p>Stories told through cinema and television.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <div class="container">
+        <p class="section-label">05 / Philosophy</p>
+        <p class="quote">
+          "The mind that inspires me most
+          is <span>my own.</span>"
+        </p>
+      </div>
+    </section>
+
+    <section id="vision">
+      <div class="container">
+        <p class="section-label">06 / The bigger picture</p>
+        <h2>A life without limits.</h2>
+        <p class="section-text">
+          I want to become someone who has explored the
+          possibilities of life to the fullest.
+
+          I want to learn, create, experience, achieve my dreams
+          and discover what I am truly capable of.
+
+          There is too much to explore and too little time
+          to settle for a life without ambition.
+        </p>
+        <p class="languages">BANGLA · ENGLISH · HINDI</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Meheran Tahasin. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="chatbot.js" defer></script>
+</body>
+</html>
