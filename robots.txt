@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meherantahasin-png.github.io/sitemap.xml
