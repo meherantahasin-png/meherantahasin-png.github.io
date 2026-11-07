@@ -5,15 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>About Me | Meheran Tahasin</title>
-  <meta name="description" content="Learn more about Meheran Tahasin, his education, interests, and ambitions.">
+  <meta name="description" content="Learn more about Meheran Tahasin, a student from Jhenaidah, Bangladesh: his education, interests in technology and computer science, and ambitions.">
   <meta name="author" content="Meheran Tahasin">
   <meta name="theme-color" content="#081426">
 
   <link rel="canonical" href="https://meherantahasin-png.github.io/about.html">
+  <link rel="icon" href="profile.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:title" content="About Me | Meheran Tahasin">
+  <meta property="og:description" content="Learn more about Meheran Tahasin, a student from Jhenaidah, Bangladesh: his education, interests in technology and computer science, and ambitions.">
+  <meta property="og:image" content="https://meherantahasin-png.github.io/profile.jpg">
+  <meta property="og:url" content="https://meherantahasin-png.github.io/about.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About Me | Meheran Tahasin">
+  <meta name="twitter:description" content="Learn more about Meheran Tahasin, a student from Jhenaidah, Bangladesh: his education, interests in technology and computer science, and ambitions.">
+  <meta name="twitter:image" content="https://meherantahasin-png.github.io/profile.jpg">
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="navbar container" aria-label="Main navigation">
@@ -21,13 +37,14 @@
 
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main class="page-main container">
+  <main id="main" class="page-main container">
 
     <section class="page-heading">
       <span class="eyebrow">GET TO KNOW ME</span>
@@ -39,7 +56,8 @@
       <div class="about-image-main">
         <img
           src="about-photo.jpg"
-          alt="Meheran Tahasin"
+          alt="Photo of Meheran Tahasin"
+          width="1200" height="1600"
           loading="lazy"
         >
       </div>
@@ -137,7 +155,8 @@
       <div class="portrait-image">
         <img
           src="portrait.jpg"
-          alt="Meheran Tahasin"
+          alt="Another photo of Meheran Tahasin"
+          width="1200" height="1553"
           loading="lazy"
         >
       </div>
@@ -155,17 +174,30 @@
     <section class="closing-section">
       <h2>Let's connect.</h2>
       <p>Have something interesting to discuss?</p>
-      <a href="contact.html" class="btn btn-primary">
-        Get in Touch <span aria-hidden="true">↗</span>
-      </a>
+      <div class="closing-actions">
+        <a href="contact.html" class="btn btn-primary">
+          Get in Touch <span aria-hidden="true">↗</span>
+        </a>
+        <a href="projects.html" class="btn btn-outline">
+          See my projects <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© <span data-year></span> Meheran Tahasin.</p>
-      <p>Designed with purpose.</p>
+      <div>
+        <p>&copy; <span data-year></span> Meheran Tahasin.</p>
+        <p>Designed with purpose.</p>
+      </div>
+      <nav class="footer-social" aria-label="Social links">
+        <a href="https://www.youtube.com/@meherantahasin4952" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/meheran_tahasin/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://github.com/meherantahasin-png" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.facebook.com/share/1RuGTZngkF/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </nav>
     </div>
   </footer>
 
