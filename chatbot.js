@@ -9,6 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     element.textContent = new Date().getFullYear();
   });
 
+  // Reveal the email address only in the browser (keeps it out of scrapers' reach).
+  document.querySelectorAll("[data-email-u]").forEach(element => {
+    const address = `${element.dataset.emailU}@${element.dataset.emailD}`;
+    element.setAttribute("href", `mailto:${address}`);
+
+    const label = element.querySelector("[data-email-text]");
+    if (label) label.textContent = address;
+  });
+
   // Add a floating launcher on About and Contact pages.
   const currentPage = window.location.pathname.split("/").pop();
   const isHomePage = currentPage === "" || currentPage === "index.html";
@@ -45,6 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
 
+    <div class="chat-chips">
+      <button class="chat-chip" type="button">What does he study?</button>
+      <button class="chat-chip" type="button">What are his interests?</button>
+      <button class="chat-chip" type="button">How can I contact him?</button>
+    </div>
+
     <div class="chat-status" aria-live="polite">
       AI assistant
     </div>
@@ -73,6 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendButton = panel.querySelector(".chat-send");
   const status = panel.querySelector(".chat-status");
   const closeButton = panel.querySelector(".chat-close");
+
+  // Suggested questions.
+  panel.querySelectorAll(".chat-chip").forEach(chip => {
+    chip.addEventListener("click", () => sendMessage(chip.textContent));
+  });
 
   // Open the chat from any button carrying data-chat-open.
   document.querySelectorAll("[data-chat-open]").forEach(button => {
@@ -113,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isSending || !text.trim()) return;
 
     isSending = true;
+    panel.querySelector(".chat-chips")?.remove();
     sendButton.disabled = true;
     input.disabled = true;
     status.textContent = "Thinking...";
