@@ -11,14 +11,20 @@
 
   <link rel="canonical" href="https://meherantahasin-png.github.io/">
   <link rel="icon" href="profile.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
 
-  <meta property="og:title" content="Meheran Tahasin">
-  <meta property="og:description" content="Student, technology enthusiast, and aspiring computer scientist.">
+  <meta property="og:title" content="Meheran Tahasin | Personal Website">
+  <meta property="og:description" content="The personal website of Meheran Tahasin, a student from Bangladesh interested in technology and computer science.">
   <meta property="og:image" content="https://meherantahasin-png.github.io/profile.jpg">
   <meta property="og:url" content="https://meherantahasin-png.github.io/">
   <meta property="og:type" content="website">
-
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Meheran Tahasin | Personal Website">
+  <meta name="twitter:description" content="The personal website of Meheran Tahasin, a student from Bangladesh interested in technology and computer science.">
+  <meta name="twitter:image" content="https://meherantahasin-png.github.io/profile.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,37 +32,34 @@
     "name": "Meheran Tahasin",
     "url": "https://meherantahasin-png.github.io/",
     "image": "https://meherantahasin-png.github.io/profile.jpg",
-    "email": "meherantahasin@gmail.com",
     "sameAs": [
       "https://www.instagram.com/meheran_tahasin/",
       "https://www.facebook.com/share/1RuGTZngkF/",
-      "https://www.youtube.com/@meherantahasin4952"
+      "https://www.youtube.com/@meherantahasin4952",
+      "https://github.com/meherantahasin-png"
     ]
   }
   </script>
-  <style>
-    .youtube-section{padding:2rem 0 4rem}
-    .yt-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding:2rem;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(255,255,255,.04)}
-    .yt-card h2{margin:.25rem 0 .5rem}
-    .yt-card p{margin:0;opacity:.8}
-  </style>
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="index.html">MT<span>.</span></a>
 
       <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero container">
       <div class="hero-content">
         <span class="eyebrow">
@@ -88,10 +91,57 @@
             src="profile.jpg"
             alt="Portrait of Meheran Tahasin"
             class="hero-image"
+            width="1000" height="1328"
             fetchpriority="high"
           >
         </div>
         <span class="image-decoration"></span>
+      </div>
+    </section>
+
+    <section class="home-section container">
+      <div class="section-heading">
+        <span class="eyebrow">WHAT I'M INTO</span>
+        <h2>Things I enjoy.</h2>
+      </div>
+
+      <div class="interest-grid">
+        <article class="interest-card">
+          <span class="interest-number">01</span>
+          <h3>Technology</h3>
+          <p>Smartphones, gadgets, and the products shaping everyday life.</p>
+        </article>
+
+        <article class="interest-card">
+          <span class="interest-number">02</span>
+          <h3>Computer Science</h3>
+          <p>Computing, software, and how digital systems work.</p>
+        </article>
+
+        <article class="interest-card">
+          <span class="interest-number">03</span>
+          <h3>Anime &amp; Films</h3>
+          <p>Stories, characters, and cinema from different cultures.</p>
+        </article>
+
+        <article class="interest-card">
+          <span class="interest-number">04</span>
+          <h3>Literature</h3>
+          <p>Books and ideas that offer different perspectives on life.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="youtube-section container">
+      <div class="yt-card">
+        <div>
+          <span class="eyebrow">ON YOUTUBE</span>
+          <h2>Watch my channel</h2>
+          <p>Follow my YouTube channel for my videos and updates.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.youtube.com/@meherantahasin4952" target="_blank" rel="noopener noreferrer">
+          Visit my channel <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
 
@@ -114,27 +164,20 @@
         </div>
       </div>
     </section>
-
-    <section class="youtube-section">
-      <div class="container">
-        <div class="yt-card">
-          <div>
-            <span class="eyebrow">ON YOUTUBE</span>
-            <h2>Watch my channel</h2>
-            <p>Follow my YouTube channel for my videos and updates.</p>
-          </div>
-          <a class="btn btn-primary" href="https://www.youtube.com/@meherantahasin4952" target="_blank" rel="noopener noreferrer">
-            Visit my YouTube channel <span aria-hidden="true">&#8599;</span>
-          </a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© <span data-year></span> Meheran Tahasin.</p>
-      <p>Designed with purpose.</p>
+      <div>
+        <p>&copy; <span data-year></span> Meheran Tahasin.</p>
+        <p>Designed with purpose.</p>
+      </div>
+      <nav class="footer-social" aria-label="Social links">
+        <a href="https://www.youtube.com/@meherantahasin4952" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/meheran_tahasin/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://github.com/meherantahasin-png" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.facebook.com/share/1RuGTZngkF/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </nav>
     </div>
   </footer>
 
